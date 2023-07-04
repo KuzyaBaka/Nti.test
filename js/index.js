@@ -53,8 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  console.log(slides.children);
-
   sliderButton.addEventListener("click", nextSlide);
 
   /* Валидация номера */
@@ -98,4 +96,43 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   phone.addEventListener("input", handlePhoneInput);
+
+  /* Текст */
+
+  const advCard = document.querySelector(".adv-card");
+  const tittleText = document.querySelectorAll(".card-tittle__news");
+  const text = document.querySelectorAll(".card-desc__news");
+
+  function handleChangeText() {
+    text[0].textContent =
+      "В наличии широкий ассортимент, а также доступные цены на ноутбуки Dell";
+    text[1].textContent =
+      "Сертифицированный сервисный центр по ремонту техники Dell в России и странах СНГ";
+    text[2].textContent =
+      "Мы прошли аттестацию в виде тестирования, где показали высокий уровень знаний";
+    text[3].textContent =
+      "Мы лучший официальный поставщик продукции DELL в России и странах СНГ";
+
+    tittleText[0].textContent = "У нас самые выгодные\nи низкие цены";
+    tittleText[1].textContent = "Авторизованный сервисный центр DELL";
+    tittleText[2].textContent = "Высокий уровень технической экспертизы ";
+    tittleText[3].textContent = "Мы являемся официальным партнером DELL";
+  }
+
+  if (advCard.offsetWidth <= 375) {
+    handleChangeText();
+  }
+
+  /* Бургер */
+
+  const burger = document.getElementById("burger-button");
+  const burgerLines = document.querySelectorAll(".burger-lines");
+  const burgerMenu = document.querySelector(".burger-menu")
+
+  const handleBurger = () => {
+    burgerMenu.classList.toggle('set-height')
+  }
+
+  burger.addEventListener("click", handleBurger)
+
 });

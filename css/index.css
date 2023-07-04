@@ -275,6 +275,45 @@ header {
   border: 1px solid #292d32;
 }
 
+.cross.burger-lines__first {
+  margin: 0;
+
+  transform: rotate(45deg);
+  transition: 1s;
+}
+
+.burger-menu {
+  padding: 56px 0 0 38px;
+
+  width: 375px;
+  height: 390px;
+
+  background-color: #FFFFFF;
+
+  position: absolute;
+  top: 68px;
+  right: -15px;
+  z-index: 100;
+
+  overflow: hidden;
+
+  transition: 1s;
+}
+
+.burger-ul {
+  width: 80px;
+  height: 270px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.set-height {
+  padding-top: 0;
+  height: 0;
+}
+
 .hidden {
   display: none;
 }
@@ -305,6 +344,8 @@ header {
   header {
     height: 90px;
     padding: 0 15px;
+
+    background-color: #FFFFFF;
   }
 
   .header-ul {
@@ -314,10 +355,11 @@ header {
   .mobile-ul__header {
     display: flex;
     gap: 15px;
+    position: relative;
   }
 
   .logo {
-    margin-right: 67.77px;
+    margin-right: 64px;
   }
 }
 
@@ -1032,6 +1074,101 @@ header {
   font-family: "Euclid Circular A";
   font-size: 16px;
   font-weight: 300;
+}
+
+@media (max-width: 375px) {
+  .advantage-container {
+    padding: 0 15px;
+    width: 375px;
+    height: auto;
+
+    overflow: hidden;
+  }
+
+  .adv-top {
+    right: 0;
+
+    flex-direction: column-reverse;
+  }
+
+  .notebookHolder {
+    top: -50px;
+    left: 60px;
+  }
+
+  .textHolder {
+    top: 0;
+    right: 0;
+  }
+
+  .title-text__adv {
+    margin: 101px 0 20px 0;
+    font-size: 30px;
+  }
+
+  .text__adv {
+    margin-bottom: 30px;
+  }
+
+  .circle-btn__request {
+    width: 45px;
+    height: 45px;
+  }
+
+  .adv-bg-img {
+    width: 345px;
+    height: 194px;
+  }
+
+  .bg-text {
+    width: 335px;
+    height: 121px;
+
+    font-size: 70px;
+
+    top: 375px;
+    left: 13px;
+  }
+
+  .card-top {
+    padding: 15px 0 0 15px;
+  }
+
+  .adv-card {
+    width: 345px;
+    height: 211px;
+
+    border-radius: 10px;
+  }
+
+  .icon-holder {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-holder > img {
+    width: 31px;
+    height: 31px;
+  }
+
+  .line {
+    width: 121px;
+    height: 64px;
+  }
+
+  .line > img {
+    width: 121px;
+    height: 64px;
+  }
+
+  .card-bottom {
+    padding-left: 15px;
+  }
+
+  .card-tittle__news {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
 }
 
 /* News section */
