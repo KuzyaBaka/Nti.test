@@ -10,10 +10,7 @@
 
 @font-face {
   font-family: "Euclid Circular A";
-  src: url(../fonts/Euclid\Circular\A\Regular.ttf);
-  src: url(../fonts/Euclid\Circular\A\Bold.ttf);
-
-  font-style: normal;
+  src: url(../fonts/Euclid\ Circular\ A\ Regular.ttf);
 }
 
 * {
@@ -854,7 +851,7 @@ header {
 }
 
 .contacts {
-  padding-top: 100px;
+  padding-top: 98px;
   padding-left: 100px;
 
   width: 50%;
@@ -869,8 +866,14 @@ header {
   position: relative;
 }
 
+.title-text_contacts {
+  margin-bottom: 10px;
+}
+
 .ul-contacts {
-  margin-top: 48px;
+  margin-top: 38px;
+  padding-top: 10px;
+
   display: flex;
   flex-direction: column;
 }
@@ -884,6 +887,10 @@ header {
 
   display: flex;
   align-items: center;
+}
+
+.li-title__phone {
+  margin-top: 20px;
 }
 
 .li-title__address::before {
@@ -937,6 +944,9 @@ header {
 }
 
 .ul-social {
+  margin-top: 13px;
+  margin-left: 3px;
+
   width: 93.712px;
   height: 37.712px;
 
@@ -958,6 +968,8 @@ header {
 }
 
 .title-text__form {
+  margin-bottom: 8px;
+
   color: #fff;
 }
 
@@ -1025,6 +1037,10 @@ header {
   padding: 0 5px;
 }
 
+.circle-btn__contact {
+  margin-top: 7px;
+}
+
 .circle-btn__contact::after {
   content: "Заказать";
   color: #fff;
@@ -1034,7 +1050,7 @@ header {
   line-height: 30px;
 
   position: absolute;
-  right: -150%;
+  left: calc(100% + 12px);
 }
 
 .form-bg {
