@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Euclid Circular A";
-  src: url(../fonts/Euclid\ Circular\ A\ Regular.ttf);
+  src: url(../fonts/Euclid\Circular\A\Regular.ttf);
 }
 
 * {
@@ -72,17 +72,17 @@ button {
 /* Header styles */
 
 header {
-  margin: 0 auto;
-
-  max-width: 1920px;
   height: 123px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: #fafafa;
 }
 
 .header-container {
+  margin: 0 auto;
   width: 1400px;
   height: 70px;
   display: flex;
@@ -132,10 +132,32 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: relative;
 }
 
-.profile-btn {
-  position: relative;
+.basket-li::after {
+  content: "3";
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+  background-color: #3086c8;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #FFF;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  position: absolute;
+  top: -1.5px;
+  right: 0px;
 }
 
 .profile-menu {
@@ -152,7 +174,41 @@ header {
   z-index: 100;
 }
 
-.profile-ul > li {
+.rhomb {
+  width: 18px;
+  height: 18px;
+
+  background-color: #fff;
+  border-radius: 2px;
+
+  transform: rotate(45deg);
+
+  position: absolute;
+  top: -8px;
+  left: calc(50% - 8px);
+}
+
+.profile-icon__holder {
+  margin-right: 20px;
+
+  width: 49px;
+  height: 49px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f9f9f9;
+  border-radius: 50%;
+}
+
+.profile-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-variants {
   padding-left: 30px;
 
   width: 100%;
@@ -160,8 +216,31 @@ header {
 
   display: flex;
   align-items: center;
+  flex-grow: 0;
 
   border-top: 1px solid #f2f2f2;
+
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: none;
+}
+
+.profile-li {
+  padding-left: 30px;
+  margin-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: none;
 }
 
 .hidden {
@@ -604,6 +683,7 @@ header {
 .bg-text {
   position: absolute;
   top: 152px;
+  left: -260px;
   z-index: 0;
 
   font-size: 187px;
