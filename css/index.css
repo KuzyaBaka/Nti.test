@@ -8,6 +8,14 @@
   src: url(../fonts/RubikOne-Regular.ttf);
 }
 
+@font-face {
+  font-family: "Euclid Circular A";
+  src: url(../fonts/Euclid\Circular\A\Regular.ttf);
+  src: url(../fonts/Euclid\ Circular\ A\ Bold.ttf);
+
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -525,28 +533,60 @@ header {
   background-color: #f2f2f2;
 }
 
-.catalog-container__adv > div {
-  margin: 0 4px;
+.catalog-container__adv {
+  margin: 0;
 }
 
 .advantage-container {
   padding-bottom: 46px;
-
   margin: 0 auto;
-  max-width: 1400px;
+
+  width: 1400px;
+  height: 962px;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
 
-  overflow: hidden;
+  position: relative;
 }
 
 .adv-top {
-  width: 1930px;
   display: flex;
 
   position: relative;
+  right: 80px;
+  z-index: 10;
+}
+
+.title-text__adv {
+  margin-bottom: 37px;
+
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.text__adv {
+  margin-bottom: 41px;
+
+  color: #838383;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.notebookHolder {
+  position: relative;
+  top: 87px;
+}
+
+.textHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+  top: 70px;
+  right: 80px;
 }
 
 .circle-btn__request::after {
@@ -566,6 +606,9 @@ header {
 
 .bg-text {
   position: absolute;
+  top: 152px;
+  z-index: 0;
+
   font-size: 187px;
   font-family: "Rubik One";
   font-style: normal;
@@ -575,17 +618,18 @@ header {
   -moz-user-select: none;
   -khtml-user-select: none;
   user-select: none;
-}
-
-.adv-bottom {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .adv-card {
-  width: 342px;
+  width: 330px;
   height: 289px;
 
   background: #292d32;
@@ -593,7 +637,11 @@ header {
 }
 
 .card-top {
+  padding: 30px 0 25px 30px;
+
   display: flex;
+
+  position: relative;
 }
 
 .icon-holder {
@@ -608,14 +656,33 @@ header {
   align-items: center;
 }
 
-.card-tittle {
-  color: #fff;
-  font-size: 22px;
-  font-weight: 700;
+.line {
+  position: absolute;
+  top: 3px;
+  right: 0;
 }
 
-.card-desc {
+.card-bottom {
+  padding-left: 30px;
+}
+
+.card-tittle__news {
+  margin-bottom: 13px;
+
+  color: #fff;
+  font-size: 22px;
+  font-family: "Euclid Circular A";
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card-desc__news {
+  width: 276px;
+  height: 60px;
+
   color: #b7b7b7;
+  font-family: "Euclid Circular A";
   font-size: 16px;
   font-weight: 300;
 }
