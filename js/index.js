@@ -135,4 +135,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   burger.addEventListener("click", handleBurger)
 
+  /* Замена картинок слайдера */
+
+  const firstImgSlider = document.querySelectorAll(".slider-bottom__img")
+  const sliderImg = document.querySelectorAll(".slider-bottom2__img");
+  const sliderContainer = document.querySelector(".scnd-slidesholder");
+
+  const handleChangeImage = () => {
+    sliderImg[0].setAttribute('src', './assets/mobile-slider.png')
+    sliderImg[1].setAttribute('src', './assets/mobile-slider.png')
+    firstImgSlider[0].setAttribute('src', './assets/mobile-slider2.png')
+    firstImgSlider[1].setAttribute('src', './assets/mobile-slider2.png')
+  }
+
+  if (sliderContainer.offsetWidth <= 375) {
+    handleChangeImage()
+  }
+
 });

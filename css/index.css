@@ -288,7 +288,7 @@ header {
   width: 375px;
   height: 390px;
 
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 
   position: absolute;
   top: 68px;
@@ -345,7 +345,7 @@ header {
     height: 90px;
     padding: 0 15px;
 
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 
   .header-ul {
@@ -546,11 +546,15 @@ header {
 
 @media (max-width: 375px) {
   .main-section {
+    margin-bottom: 120px;
+
     width: 375px;
+
+    background-color: transparent;
   }
 
   .section-container {
-    padding: 0 15px 0 15px;
+    width: 375px;
     flex-direction: column;
   }
 
@@ -559,8 +563,9 @@ header {
   }
 
   .left {
-    padding: 0;
+    padding: 0 15px 0 15px;
     flex-direction: column;
+    background-color: #f2f2f2;
   }
 
   .best-section__bg {
@@ -576,7 +581,7 @@ header {
   }
 
   .text__best {
-    margin-top: 105px;
+    margin-top: 76px;
     margin-bottom: 5px;
 
     color: #838383;
@@ -587,6 +592,9 @@ header {
   }
 
   .title-text__best {
+    width: 446px;
+    height: 70px;
+
     color: #292d32;
     font-size: 30px;
     font-style: normal;
@@ -595,12 +603,14 @@ header {
   }
 
   .textSlider {
-    margin-bottom: 28px;
+    margin-bottom: 0;
 
     height: 70px;
   }
 
   .circle-btn__best {
+    margin-top: 30px;
+
     width: 45px;
     height: 45px;
 
@@ -623,6 +633,56 @@ header {
   .slide-img {
     width: 327px;
     height: 325px;
+  }
+
+  .right {
+    padding: 0 15px 0 15px;
+
+    width: 100%;
+    height: 196px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .right-sliderholder {
+
+  }
+
+  .right-slider {
+    width: 128px;
+    height: 78px;
+
+    display: flex;
+
+    overflow: hidden;
+
+    position: relative;
+    top: 10px;
+  }
+
+  .right-text {
+    color: #292d32;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  .scnd-slidesholder {
+    margin: 15px 0 0 0;
+
+    width: 252px;
+    height: 166px;
+
+    position: relative;
+    right: 25px;
+  }
+
+  .sliderButton {
+    top: 0;
+    left: 0;
   }
 }
 
