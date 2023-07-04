@@ -4,8 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const body = document.querySelector("body");
 
   const sliderButton = document.getElementById("sliderButton");
-  const slides = document.querySelector(".sliderholder");
-  const slide = document.querySelectorAll(".slider");
+  const slider = document.querySelector(".sliderholder");
+  const slides = document.querySelector(".slides");
+  const scndSlider = document.querySelector(".scnd-slidesholder");
+  const scndSlides = document.querySelector(".scnd-slides");
+  const textSlider = document.querySelector(".textSlider");
+  const textSlides = document.querySelector(".textSlides");
 
   const phone = document.getElementById("tel-number");
 
@@ -23,18 +27,33 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Сайдер */
 
   let currentSlide = 0;
-  const slideWidth = slides.offsetWidth;
+  const slideWidth = slider.offsetWidth;
+  const scndSlideWidth = scndSlider.offsetWidth;
+  const textSlideWidth = textSlider.offsetWidth;
+
+  const moveSlides = () => {
+    slides.style.transform = `translateX(${-slideWidth * currentSlide}px)`;
+    textSlides.style.transform = `translateX(${
+      -textSlideWidth * currentSlide
+    }px)`;
+    scndSlides.style.transform = `translateX(${
+      -scndSlideWidth * currentSlide
+    }px)`;
+
+    console.log(-textSlideWidth * currentSlide);
+  };
 
   const nextSlide = () => {
-    if (currentSlide <= 4) {
+    if (currentSlide <= slides.children.length - 1) {
       currentSlide++;
       moveSlides();
+      if (currentSlide === slides.children.length - 1) {
+        currentSlide = -1;
+      }
     }
   };
 
-  const moveSlides = () => {
-    slide.style.transform = `translateX(${-slideWidth * currentSlide}px)`;
-  };
+  console.log(slides.children);
 
   sliderButton.addEventListener("click", nextSlide);
 
